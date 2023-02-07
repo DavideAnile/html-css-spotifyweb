@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
@@ -16,7 +17,46 @@
     <div class="big-container">
         <header>
             <nav>
-                <div id="nav-logo">LOGO</div>
+                <div id="nav-logo"><img src="img/logo.svg" alt=""></div>
+                <div id="nav-tools">
+                    <div class="tool-inner">
+                        <div class="nav-tool-icon"><img src="img/home.svg" alt=""></div>
+                        <div class="nav-tool-text"><a>Home</a></div>
+                    </div>
+                    <div class="tool-inner">
+                        <div class="nav-tool-icon"><img src="img/search.svg" alt=""></div>
+                        <div class="nav-tool-text">Cerca</div>
+                    </div>
+                    <div class="tool-inner">
+                        <div class="nav-tool-icon"><img src="img/libreria.svg" alt=""></div>
+                        <div class="nav-tool-text">La tua libreria</div>
+                    </div>
+                </div>
+
+                <div id="nav-playlist">
+                    <div><B>PLAYLIST</B></div>
+                    <div id="add-playlist">
+                        <div id="add-playlist-icon"><i class="fa-solid fa-square-plus"></i></div>
+                        <div id="add-playlist-text">Crea Playlist</div>
+                    </div>
+                    <div>Nome Playlist</div>
+                    <div>Nome Playlist</div>
+                    <div>Nome Playlist</div>
+                    <div>Nome Playlist</div>
+                    <div>Nome Playlist</div>
+                    <div>Nome Playlist</div>
+                    <div>Nome Playlist</div>
+                </div>
+                <div id="nav-footer">
+                    <div id="app-download">
+                        <div><img src="img/download.svg" alt=""></div>
+                        <div>installa app</div>
+                    </div>
+                    <div id="user">
+                        <div><img src="img/profile.svg" alt=""></div>
+                        <div><strong>Jon Doe</strong></div>
+                    </div>
+                </div>
             </nav>
         </header>
     
@@ -25,13 +65,78 @@
             <div id="main-button-container">
                 <div><button>Effettua L'upgrade</button></div>
             </div>
+            <div id="main-head-links">
+                <ul>
+                    <li><a>In evidenza</a></li>
+                    <li><a>Podscast</a></li>
+                    <li><a>Classifiche</a></li>
+                    <li><a>Generi e Mood</a></li>
+                    <li><a>Nuove Uscite</a></li>
+                    <li><a>Scopri</a></li>
+                </ul>
+            </div>
+
+            <div class="main-sections">
+                <section id="first-section">
+                    <div><h1>Recently Played</h1></div>
+                    <div class="card-container">
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                    </div>
+                </section>
+    
+    
+    
+                <section id="second-section">
+                    <div><h2>Creato per John Doe</h2></div>
+                    <div class="subtitle">Più ascolti, più accurati saranno i suggerimenti</div>
+                    <div class="card-container">
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                    </div>
+                </section>
+    
+    
+                <section>
+                    <div><h2>Creato per John Doe</h2></div>
+                    <div class="subtitle">Più ascolti, più accurati saranno i suggerimenti</div>
+                    <div class="card-container">
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                        <div class="first-sect-card"></div>
+                    </div>
+                </section>
+
+            </div>
+
+
+
+
+
+
+
+
+
         </main>
 
     </div>
 
 
     <footer>
-
+        <div class="left-player"></div>
+        <div class="central-player"></div>
+        <div class="right-player"></div>
     </footer>
 
 
