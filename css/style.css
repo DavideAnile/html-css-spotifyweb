@@ -19,19 +19,33 @@ nav{
     width: 300px;
     height: calc(100vh - 100px);
     background-color: #000000;
+    overflow: hidden;
     
 }
 
 #nav-logo{
     display: flex;
     width: 100%;
-    height: 80px;
-    padding: 0 15px;
+    padding:  15px;
 }
+    
 
     
 #nav-logo img{
-    width: 70%
+    width: 70%;
+}
+
+#hidden-logo{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#hidden-logo img{
+    width: 100%;
+
 }
     
 #nav-tools{
@@ -109,10 +123,13 @@ nav{
     
 }
 
+#app-download div:first-child{
+    width: 30px;
+    height: 30px;
+}
+
 #app-download img{
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
+    width: 100%;
 
 }
 
@@ -187,6 +204,7 @@ main img{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     list-style-type: none;
 }
@@ -222,7 +240,9 @@ main img{
 }
 
 .card-container{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -234,7 +254,9 @@ main img{
 
 .sect-card{
     width: calc(100% / 6 - (20px / 6 * 5));
-    
+    flex-wrap: wrap;
+    /* width: calc(100% / 4 - (20px / 4 * 3)); */
+    /* flex-wrap: wrap; */
     text-align: center;
 }
 
@@ -332,6 +354,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     height: 50%;
 
 }
@@ -384,6 +407,79 @@ footer{
 
 
     
+
+/* MEDIA____________________ */
+
+
+
+@media screen and (max-width: 991px){
+
+    .sect-card{
+        width: calc(100% / 4 - (20px / 4 * 3));
+    }
+}
+        
+        
+        
+@media screen and (max-width: 768px){
+    .sect-card{
+        width: calc(100% / 2 - (20px / 2 * 1));
+    }
+}
+
+
+@media screen and (max-width:680px){
+    nav{
+        width: 60px;
+    }
+
+    #big-logo{
+        display: none;
+    }
+    
+    
+    #hidden-logo{
+        display: block;
+    }
+    
+    #nav-playlist{
+        display: none;
+    }
+    
+    #nav-tools{
+        flex-grow: 1;
+        justify-content: flex-start;
+    }
+    
+    .nav-tool-text{
+        display: none;
+    }
+    
+    #app-download div:nth-child(2){
+        display: none;
+    }
+    
+    #user div:nth-child(2){
+        display: none;
+    
+    }
+    
+    
+    main{
+        width: calc(100% - 70px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
