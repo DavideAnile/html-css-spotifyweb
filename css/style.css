@@ -617,7 +617,10 @@ footer{
     
     }
     
-    
+    #main-button-container{
+        width: calc(100% - 60px);
+    }
+
     .left-player #album-player-image{
         display: flex;
         align-items: center;
