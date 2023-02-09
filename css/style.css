@@ -59,12 +59,26 @@ nav{
 
     
 .tool-inner{
+    position: relative;
     width: 100%;
     display: flex;
     gap: 10px;
     padding: 5px 0;
     
 }
+
+.tool-inner:hover:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 30px;
+    background-color: yellow;
+    cursor: pointer;
+}
+
 
 
 .nav-tool-icon img{
@@ -77,8 +91,15 @@ nav{
 .nav-tool-text{
     display: flex;
     align-items: center;
+    opacity: .5;
 }
    
+.nav-tool-text:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
 #nav-playlist{
     display: flex;
     flex-direction: column;
@@ -93,9 +114,20 @@ nav{
     opacity: .5;
 }
 
+#nav-playlist a:hover{
+    opacity: 1;
+}
+
+
 #add-playlist{
     display: flex;
     gap: 10px;
+    opacity: .6;
+}
+
+#add-playlist:hover{
+    opacity: 1;
+    cursor: pointer;
 }
     
 #add-playlist-icon{
@@ -136,6 +168,11 @@ nav{
 #app-download div:nth-child(2){
     opacity: .5;
 }
+
+#app-download div:nth-child(2):hover{
+    opacity: 1;
+}
+
 
 #user{
     display: flex;
@@ -191,6 +228,11 @@ main img{
 
 }
 
+#main-button-container button:hover{
+    cursor: pointer;
+    font-size: 1.1em;
+
+}
 
 #main-head-links{
     display: flex;
@@ -211,7 +253,7 @@ main img{
 
 
 #main-head-links ul li{
-   
+    position: relative;
     height: 40px;
     text-align: center;
     padding-top: 5px;
@@ -220,13 +262,33 @@ main img{
 }
 
 
+#main-head-links ul li:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#main-head-links ul li:hover:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 5px;
+    background-color: yellow;
+
+}
+
+
+
+
 .main-sections{
     padding: 0 20px;
     
 }
 
 .main-sections h1{
-    padding-bottom: 10px;
+    padding: 10px 0;
     
 }
 
@@ -248,8 +310,35 @@ main img{
 }
 
 .sect-img-container{
+    position: relative;
     width: 100%;
+    cursor: pointer;
     
+}
+
+.sect-img-container div{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%)
+    
+}
+
+.sect-img-container div i{
+    font-size: 4em;
+}
+
+.sect-img-container:hover img{
+    
+    opacity: .5;
+    
+}
+
+
+.sect-img-container:hover div{
+    
+    display: block;
 }
 
 
@@ -322,10 +411,20 @@ footer{
     display: flex;
     align-items: center;
     gap: 10px;
+    
+}
+
+.left-player #album-player-icons i{
+    opacity: .5
+}
+
+.left-player #album-player-icons i:hover{
+    opacity: 1;
     font-size: 1.2em;
 }
 
     
+
 .central-player{
     width: 100%;
     max-width: 600px;
@@ -344,11 +443,20 @@ footer{
     height: 50%;
     font-size: 1.5em;
     padding-top: 10px;
+    
 }
     
+.central-player .central-player-buttons i:hover{
+    cursor: pointer;
+}
 
 .central-player .central-player-buttons #play-button{
     font-size: 1.7em;
+}
+
+
+.central-player .central-player-buttons #play-button:hover{
+    font-size: 1.9em;
 }
 
 .central-player .central-player-bar{
@@ -357,6 +465,7 @@ footer{
     align-items: center;
     gap: 10px;
     height: 50%;
+    
 
 }
 
@@ -365,14 +474,35 @@ footer{
     height: 6px;
     background-color: #4e4e4e;
     border-radius: 10px;
-    
+    cursor: pointer;
 }
   
 .central-player .central-player-bar #player-bar-current{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 20%;
     height: 6px;
     background-color: white;
     border-radius: 10px;
+}
+
+
+.central-player .central-player-bar #player-bar-current #circle-current-bar{
+    display: none;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.central-player .central-player-bar:hover #player-bar-current{
+    background-color: green;
+    
+}
+
+.central-player .central-player-bar #player-bar-total:hover #circle-current-bar{
+    display: block;
 }
 
 .right-player{
@@ -385,6 +515,16 @@ footer{
     padding: 0 15px;
     
 }
+
+.right-player i{
+    opacity: .6;
+}
+
+.right-player i:hover{
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.2em;
+}
     
 
 .right-player #right-player-total{
@@ -392,7 +532,15 @@ footer{
     height: 6px;
     background-color: #4e4e4e;
     border-radius: 10px;
+    cursor: pointer;
 }
+
+.right-player #right-player-total:hover #right-player-current{
+    background-color: green;
+}
+
+
+
 
 .right-player #right-player-current{
     width: 25%;
