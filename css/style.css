@@ -329,7 +329,7 @@ footer{
 .central-player{
     width: 100%;
     max-width: 600px;
-    min-width: 250px;
+    min-width: 150px;
     height: 100%;
     
     
@@ -465,6 +465,34 @@ footer{
     
     }
     
+    
+    .left-player #album-player-image{
+        display: flex;
+        align-items: center;
+    } 
+
+
+
+    .left-player #album-player-image img{
+        height: 60%;
+    }
+
+    .left-player #album-player-icons{
+        font-size: 1em;
+    }
+
+    .left-player #album-player-text{
+        font-size: .8em;
+    }
+
+    .central-player .central-player-buttons{
+        font-size: 1.2em;
+        gap: 15px;
+    }
+    
+    .right-player{
+        font-size: .8em;
+    }
     
     main{
         width: calc(100% - 60px);
