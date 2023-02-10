@@ -167,6 +167,7 @@ nav{
 
 #app-download div:nth-child(2){
     opacity: .5;
+    cursor: pointer;
 }
 
 #app-download div:nth-child(2):hover{
@@ -317,6 +318,7 @@ main img{
     position: relative;
     width: 100%;
     cursor: pointer;
+    margin-bottom: 10px;
     
 }
 
@@ -355,11 +357,17 @@ main img{
 }
 
 
-.sect-card h4{
+.sect-card a{
     
-    padding: 15px;
+    font-weight: bold;
 }
 
+.sect-card a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+    
+ 
 
 .last-img-container img{
     border-radius: 50%;
@@ -411,9 +419,16 @@ footer{
     justify-content: center;
 }
 
+.left-player #album-player-text:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 .left-player #album-player-icons{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     
 }
@@ -448,10 +463,16 @@ footer{
     font-size: 1.5em;
     padding-top: 10px;
     
+    
 }
     
+.central-player .central-player-buttons i{
+    opacity: .5;
+}
+
 .central-player .central-player-buttons i:hover{
     cursor: pointer;
+    opacity: 1;
 }
 
 .central-player .central-player-buttons #play-button{
@@ -578,10 +599,16 @@ footer{
     .sect-card{
         width: calc(100% / 2 - (20px / 2 * 1));
     }
+
+
+    .central-player .central-player-buttons{
+        font-size: 1.2em;
+        gap: 15px;
+    }
 }
 
 
-@media screen and (max-width:680px){
+@media screen and (max-width:576px){
     nav{
         width: 60px;
     }
@@ -640,13 +667,11 @@ footer{
         font-size: .8em;
     }
 
-    .central-player .central-player-buttons{
-        font-size: 1.2em;
-        gap: 15px;
-    }
     
     .right-player{
         font-size: .8em;
+        gap: 5px;
+        
     }
     
     main{
